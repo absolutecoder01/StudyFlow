@@ -18,8 +18,7 @@ public class SecurityConfig {
                 .requestMatchers("/api/users").permitAll() // 👈 publiczny endpoint
                 .anyRequest().authenticated() // 👈 reszta wymaga logowania
             )
-            .httpBasic(); // lub .formLogin(), w zależności jak logujesz
-
+            .httpBasic(); // lub .formLogin()
         return http.build();
     }
 }
